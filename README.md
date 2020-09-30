@@ -15,7 +15,9 @@ Build a site that asks the users yes no questions to guess about me. It will pro
 #### Links and Resources:
 
 * submission PR
-* Any Links you used as reference
+* Reference Links
+    1. https://www.w3schools.com/js/js_strict.asp
+    2. 
 
 #### Reflections and Comments:
 
