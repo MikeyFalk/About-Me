@@ -1,0 +1,10 @@
+*{background-color: whitesmoke;}
+
+h1{text-align: center;
+border-bottom: solid darkslategray 5px;}
+
+h2{text-align: center;
+text-decoration: underline;}
+
+p{text-align: justify;
+color: rgb(24, 23, 23)}
