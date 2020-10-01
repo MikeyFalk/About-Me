@@ -78,15 +78,17 @@ for(var i = 0; i<5; i++){
   }
 }
 
+//Question 7 doesn't work yet 
 
+//var topMovie = ['The Big Lebowski','Bill and Ted\'s Excellent Adventure','Spectre','Layer Cake','The Empire Strikes Back',   'Monty Python\'s Search for the Holy Grail','Ghostbusers','Batman Begins','Thor: Ragnarok', 'The Godfather Part II']
 
-//Question 6 - Do you like to travel?
-// var travel = prompt('Do I like to travel?');
-// if(travel.toUpperCase()==='Y'||travel.toUpperCase()==='YES'){
-//   console.log (userName + ' thinks you like to travel');
-// } else {
-//   console.log (userName + ' thinks you are a recluse');
-// }
+//for (var i = 0; i<4; i++){
+//console.log('i is = ' + i + ' and ' + topMovie[i] + ' is the best movie'){
+//  var movieGuess = prompt('Can you name one of my top 10 favorite movies?');
+//} if (movieGuess.toLowerCase() = topMovie.toLowerCase()){
+//console.log('user guessed correctly')
+//}
+//}
 
 var endOfGameAlt = alert('Thank you for playing ' + userName + '! I live in Seattle. I have 2 pets, a cat and a dog. I like to cook, play golf, ski, hike and ride bicycles. I have a son named Max who will be 2 in December.');
 
