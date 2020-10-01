@@ -16,9 +16,11 @@ Build a site that asks the users yes no questions to guess about me. It will pro
 
 * submission PR
 * Reference Links
-    1. https://www.w3schools.com/js/js_strict.asp
-    2. 
-
+    1. How Strict command works https://www.w3schools.com/js/js_strict.asp
+    2. CSS Italics https://www.w3schools.com/cssref/pr_font_font-style.asp
+    3. Else if statments - https://www.w3schools.com/js/js_if_else.asp
+    4. Convert string to number
+     
 #### Reflections and Comments:
 
 Consider including the answers to your daily journal and submission questions here

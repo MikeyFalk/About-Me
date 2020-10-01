@@ -55,7 +55,32 @@ if(kids.toLowerCase()==='yes'|| kids.toLowerCase()==='y'){
   //console.log(userName + ' thinks you don\'t have any kids');
 }
 
-//Questions 6 - Do you like to travel?
+//Question 6 - Guess a number
+var numbguess = 22;
+for(var i = 0; i<5; i++){
+  var guessQuest = prompt('How many countries have I visited?: ');
+  console.log(i);
+  if (guessQuest == numbguess){
+    alert('Dang, You are good and you know me well!');
+    console.log('user guessed correctly');
+    break;
+  }else if (guessQuest > 13){
+    alert('Nope, too high, try lower!');
+    console.log ('too high');
+  }else if (guessQuest< 13){
+    alert('Nope, too low, guess higher!');
+    console.log ('too low');
+  }
+  if (i===3 && guessQuest != numbguess){
+    console.log('User ran out of guesses');
+    alert('Sorry, you ran out of guesses, I\'ve been to 22 countries so far.');
+    break;
+  }
+}
+
+
+
+//Question 6 - Do you like to travel?
 // var travel = prompt('Do I like to travel?');
 // if(travel.toUpperCase()==='Y'||travel.toUpperCase()==='YES'){
 //   console.log (userName + ' thinks you like to travel');
