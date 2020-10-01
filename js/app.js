@@ -1,25 +1,32 @@
 'use strict';
 // alert('is this thing on? test 1 2 3...');
+var userName = '';
 
-alert('Hello, welcome to my About Me project!');
+function welcomeMessage() {
+  alert('Hello, welcome to my About Me project!');
 
-//Get user's name
-var userName = prompt('What is your name?');
-//console.log('The user\'s name is ' + userName);
+  //Get user's name
+  userName = prompt('What is your name?');
+  //console.log('The user\'s name is ' + userName);
+}
+welcomeMessage();
 
 //Question 1 - Do you want to play the game?
-var greeting = prompt('Nice to meet you ' + userName + '. Would you like to play a guessing game about me today?');
-if(greeting.toLowerCase() === 'yes' || greeting.toLowerCase()==='y'){
-  alert('Excellent. Let\'s begin.');
-  //console.log(userName + ' is interested in playing -- right on!');
-} else {
-  alert('Oh, come on. You\'re already here. These questions are easy.');
-  //console.log(userName + ' turned us down -- bummer --sadface');
+function questionOne() {
+  var greeting = prompt('Nice to meet you ' + userName + '. Would you like to play a guessing game about me today?');
+  if (greeting.toLowerCase() === 'yes' || greeting.toLowerCase() === 'y') {
+    alert('Excellent. Let\'s begin.');
+    //console.log(userName + ' is interested in playing -- right on!');
+  } else {
+    alert('Oh, come on. You\'re already here. These questions are easy.');
+    //console.log(userName + ' turned us down -- bummer --sadface');
+  }
 }
+questionOne();
 
 //Question 2 - Do I live in Seattle?
-var whereILive =prompt('Do I live in Seattle?');
-if(whereILive.toLowerCase() === 'yes' || whereILive.toLowerCase()==='y'){
+var whereILive = prompt('Do I live in Seattle?');
+if (whereILive.toLowerCase() === 'yes' || whereILive.toLowerCase() === 'y') {
   alert('Bingo! You are correct. Why would anybody live anywhere else?');
   //console.log(userName + ' thinks you live in Seatlle');
 } else {
@@ -29,7 +36,7 @@ if(whereILive.toLowerCase() === 'yes' || whereILive.toLowerCase()==='y'){
 
 //Question 3 - Do I have any pets?
 var doIHavePets = prompt('Do I have any pets?');
-if(doIHavePets.toUpperCase()==='YES' || doIHavePets.toUpperCase()==='Y'){
+if (doIHavePets.toUpperCase() === 'YES' || doIHavePets.toUpperCase() === 'Y') {
   alert('Very nice! Correct, I have two pets. A cat named Kitty and a dog named Chloe.');
   //console.log(userName + ' thinks you have pets');
 } else {//console.log(userName + ' thinks you don\'t have any pets');
@@ -37,7 +44,7 @@ if(doIHavePets.toUpperCase()==='YES' || doIHavePets.toUpperCase()==='Y'){
 }
 //Question 4 - Do I have any hobbies?
 var hobbies = prompt('Do I have any hobbies?');
-if(hobbies.toLowerCase()==='yes'|| hobbies.toLowerCase()==='y'){
+if (hobbies.toLowerCase() === 'yes' || hobbies.toLowerCase() === 'y') {
   alert('Well done!, I love to ski, play golf, cook and ride bicylces.');
   //console.log(userName + ' thinks you have hobbies' );
 } else {
@@ -47,7 +54,7 @@ if(hobbies.toLowerCase()==='yes'|| hobbies.toLowerCase()==='y'){
 
 //Question 5 - Do I have any kids?
 var kids = prompt('Do I have kids?');
-if(kids.toLowerCase()==='yes'|| kids.toLowerCase()==='y'){
+if (kids.toLowerCase() === 'yes' || kids.toLowerCase() === 'y') {
   alert('Correct, I have a son named Max who\'s almost 2 and is awesome!');
   //console.log(userName + ' thinks you have kids');
 } else {
@@ -57,21 +64,21 @@ if(kids.toLowerCase()==='yes'|| kids.toLowerCase()==='y'){
 
 //Question 6 - Guess a number
 var numbguess = 22;
-for(var i = 0; i<5; i++){
+for (var i = 0; i < 5; i++) {
   var guessQuest = prompt('How many countries have I visited?: ');
   //console.log(i);
-  if (parseInt(guessQuest) === numbguess){
+  if (parseInt(guessQuest) === numbguess) {
     alert('Dang, You are good and you know me well!');
     //console.log('user guessed correctly');
     break;
-  }else if (parseInt(guessQuest) > 13){
+  } else if (parseInt(guessQuest) > 13) {
     alert('Nope, too high, try lower!');
     //console.log ('too high');
-  }else if (parseInt(guessQuest)< 13){
+  } else if (parseInt(guessQuest) < 13) {
     alert('Nope, too low, guess higher!');
     //console.log ('too low');
   }
-  if (i===3 && parseInt(guessQuest) !== numbguess){
+  if (i === 3 && parseInt(guessQuest) !== numbguess) {
     //console.log('User ran out of guesses');
     alert('Sorry, you ran out of guesses, I\'ve been to 22 countries so far.');
     break;

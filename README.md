@@ -9,6 +9,7 @@
 Build a site that asks the users yes no questions to guess about me. It will provide a response to the user and collect the response in the console log and customize the response by asking the user's name and using their name in the responses
 
 #### Author: Michael Falk
+#### collab with Andrew Liming
 
 #### Date: 9/29/2020
 
