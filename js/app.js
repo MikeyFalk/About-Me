@@ -25,7 +25,7 @@ function questionOne() {
 questionOne();
 
 //Question 2 - Do I live in Seattle?
-function questionTwo(){
+function questionTwo() {
   var whereILive = prompt('Do I live in Seattle?');
   if (whereILive.toLowerCase() === 'yes' || whereILive.toLowerCase() === 'y') {
     alert('Bingo! You are correct. Why would anybody live anywhere else?');
@@ -38,22 +38,29 @@ function questionTwo(){
 questionTwo();
 
 //Question 3 - Do I have any pets?
-var doIHavePets = prompt('Do I have any pets?');
-if (doIHavePets.toUpperCase() === 'YES' || doIHavePets.toUpperCase() === 'Y') {
-  alert('Very nice! Correct, I have two pets. A cat named Kitty and a dog named Chloe.');
-  //console.log(userName + ' thinks you have pets');
-} else {//console.log(userName + ' thinks you don\'t have any pets');
-  alert('Opps, incorrect.... I have two pets. A cat named Kitty and a dog named Chloe.');
+function questionThree() {
+  var doIHavePets = prompt('Do I have any pets?');
+  if (doIHavePets.toUpperCase() === 'YES' || doIHavePets.toUpperCase() === 'Y') {
+    alert('Very nice! Correct, I have two pets. A cat named Kitty and a dog named Chloe.');
+    //console.log(userName + ' thinks you have pets');
+  } else {//console.log(userName + ' thinks you don\'t have any pets');
+    alert('Opps, incorrect.... I have two pets. A cat named Kitty and a dog named Chloe.');
+  }
 }
+questionThree();
+
 //Question 4 - Do I have any hobbies?
-var hobbies = prompt('Do I have any hobbies?');
-if (hobbies.toLowerCase() === 'yes' || hobbies.toLowerCase() === 'y') {
-  alert('Well done!, I love to ski, play golf, cook and ride bicylces.');
-  //console.log(userName + ' thinks you have hobbies' );
-} else {
-  alert('What?!?! Do think all I do is write code all day? Everybody\'s got a hobbie.');
-  //console.log(userName + ' Thinks you only like to code');
+function questionFour() {
+  var hobbies = prompt('Do I have any hobbies?');
+  if (hobbies.toLowerCase() === 'yes' || hobbies.toLowerCase() === 'y') {
+    alert('Well done!, I love to ski, play golf, cook and ride bicylces.');
+    //console.log(userName + ' thinks you have hobbies' );
+  } else {
+    alert('What?!?! Do think all I do is write code all day? Everybody\'s got a hobbie.');
+    //console.log(userName + ' Thinks you only like to code');
+  }
 }
+questionFour();
 
 //Question 5 - Do I have any kids?
 var kids = prompt('Do I have kids?');
