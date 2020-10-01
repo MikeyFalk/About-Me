@@ -71,7 +71,7 @@ for(var i = 0; i<5; i++){
     alert('Nope, too low, guess higher!');
     //console.log ('too low');
   }
-  if (i===3 && parseInt(guessQuest) != numbguess){
+  if (i===3 && parseInt(guessQuest) !== numbguess){
     //console.log('User ran out of guesses');
     alert('Sorry, you ran out of guesses, I\'ve been to 22 countries so far.');
     break;
