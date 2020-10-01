@@ -63,37 +63,43 @@ function questionFour() {
 questionFour();
 
 //Question 5 - Do I have any kids?
-var kids = prompt('Do I have kids?');
-if (kids.toLowerCase() === 'yes' || kids.toLowerCase() === 'y') {
-  alert('Correct, I have a son named Max who\'s almost 2 and is awesome!');
-  //console.log(userName + ' thinks you have kids');
-} else {
-  alert('Incorrect. I have a son named Max who\'s almost 2 and is amazing!');
-  //console.log(userName + ' thinks you don\'t have any kids');
+function questionFive() {
+  var kids = prompt('Do I have kids?');
+  if (kids.toLowerCase() === 'yes' || kids.toLowerCase() === 'y') {
+    alert('Correct, I have a son named Max who\'s almost 2 and is awesome!');
+    //console.log(userName + ' thinks you have kids');
+  } else {
+    alert('Incorrect. I have a son named Max who\'s almost 2 and is amazing!');
+    //console.log(userName + ' thinks you don\'t have any kids');
+  }
 }
+questionFive();
 
 //Question 6 - Guess a number
-var numbguess = 22;
-for (var i = 0; i < 5; i++) {
-  var guessQuest = prompt('How many countries have I visited?: ');
-  //console.log(i);
-  if (parseInt(guessQuest) === numbguess) {
-    alert('Dang, You are good and you know me well!');
-    //console.log('user guessed correctly');
-    break;
-  } else if (parseInt(guessQuest) > 13) {
-    alert('Nope, too high, try lower!');
-    //console.log ('too high');
-  } else if (parseInt(guessQuest) < 13) {
-    alert('Nope, too low, guess higher!');
-    //console.log ('too low');
-  }
-  if (i === 3 && parseInt(guessQuest) !== numbguess) {
-    //console.log('User ran out of guesses');
-    alert('Sorry, you ran out of guesses, I\'ve been to 22 countries so far.');
-    break;
+function guessingGame() {
+  var numbguess = 22;
+  for (var i = 0; i < 5; i++) {
+    var guessQuest = prompt('How many countries have I visited?: ');
+    //console.log(i);
+    if (parseInt(guessQuest) === numbguess) {
+      alert('Dang, You are good and you know me well!');
+      //console.log('user guessed correctly');
+      break;
+    } else if (parseInt(guessQuest) > 13) {
+      alert('Nope, too high, try lower!');
+      //console.log ('too high');
+    } else if (parseInt(guessQuest) < 13) {
+      alert('Nope, too low, guess higher!');
+      //console.log ('too low');
+    }
+    if (i === 3 && parseInt(guessQuest) !== numbguess) {
+      //console.log('User ran out of guesses');
+      alert('Sorry, you ran out of guesses, I\'ve been to 22 countries so far.');
+      break;
+    }
   }
 }
+guessingGame();
 
 //Question 7 doesn't work yet 
 
