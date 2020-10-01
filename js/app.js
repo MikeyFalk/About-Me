@@ -25,14 +25,17 @@ function questionOne() {
 questionOne();
 
 //Question 2 - Do I live in Seattle?
-var whereILive = prompt('Do I live in Seattle?');
-if (whereILive.toLowerCase() === 'yes' || whereILive.toLowerCase() === 'y') {
-  alert('Bingo! You are correct. Why would anybody live anywhere else?');
-  //console.log(userName + ' thinks you live in Seatlle');
-} else {
-  alert('Ouch... Incorrect. I moved to Seattle in 2009 and love it!');
-  //console.log(userName + 'thinks you live somewhere else');
+function questionTwo(){
+  var whereILive = prompt('Do I live in Seattle?');
+  if (whereILive.toLowerCase() === 'yes' || whereILive.toLowerCase() === 'y') {
+    alert('Bingo! You are correct. Why would anybody live anywhere else?');
+    //console.log(userName + ' thinks you live in Seatlle');
+  } else {
+    alert('Ouch... Incorrect. I moved to Seattle in 2009 and love it!');
+    //console.log(userName + 'thinks you live somewhere else');
+  }
 }
+questionTwo();
 
 //Question 3 - Do I have any pets?
 var doIHavePets = prompt('Do I have any pets?');
