@@ -20,7 +20,8 @@ Build a site that asks the users yes no questions to guess about me. It will pro
     1. How Strict command works https://www.w3schools.com/js/js_strict.asp
     2. CSS Italics https://www.w3schools.com/cssref/pr_font_font-style.asp
     3. Else if statments - https://www.w3schools.com/js/js_if_else.asp
-    4. Convert string to number
+    4. Convert string to number https://www.w3schools.com/jsref/jsref_parseint.asp
+    4. template for setting up a guessing game https://github.com/Alex-Angelico/about-me-project/commit/7752893f8a9e547cb2c967428fcc71d990d402af
      
 #### Reflections and Comments:
 

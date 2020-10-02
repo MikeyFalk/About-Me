@@ -85,6 +85,7 @@ function questionFive() {
 questionFive();
 
 //Question 6 - Guess a number
+
 function guessingGame() {
   var numbguess = 22;
   for (var i = 0; i < 5; i++) {
@@ -111,32 +112,35 @@ function guessingGame() {
 }
 guessingGame();
 
+function movieGuessingGame() {
+  var topMovie = ['the big lebowski', 'bill and ted\'s excellent adventure', 'spectre', 'layer cake', 'the empire strikes back', 'monty python\'s search for the holy grail', 'ghostbusers', 'batman begins', 'thor: ragnarok', 'the godfather part ii'];
 
-
-
-var topMovie = ['the big lebowski', 'bill and ted\'s excellent adventure', 'spectre', 'layer cake', 'the empire strikes back', 'monty python\'s search for the holy grail', 'ghostbusers', 'batman begins', 'thor: ragnarok', 'the godfather part ii']
-
-for (var i = 0; i < 4; i++) {
-  var movieFound = false;
-  var movieGuess = prompt('Can you name one of my top 10 favorite movies?').toLowerCase();
-  for (var x = 0; x < topMovie.length; x++) {
-    if (movieGuess === topMovie[x]) {
-      answerCount++;
-      //console.log('correct');
-      movieFound = true;
-      alert('Whoa, you guessed it. You know me well! ' + answerCount + '/7 correct answers!');
-      break;
-    } else if (movieGuess !== topMovie[x]) {
-      //alert(movieGuess + 'had some plot holes. Try again');
-      //console.log('incorrect');
-    } if (i === 3 && movieGuess !== topMovie[x]) {
-      ///console.log('end of guesses');
-      //alert('Looks like you are out of guesses nice try! ' answerCount + '/7 correct answers!')
+  for (var i = 0; i < 4; i++) {
+    var movieFound = false;
+    var movieGuess = prompt('Can you name one of my top 10 favorite movies?').toLowerCase();
+    for (var x = 0; x < topMovie.length; x++) {
+      if (movieGuess === topMovie[x]) {
+        answerCount++;
+        //console.log('correct');
+        movieFound = true;
+        alert('Whoa, you guessed it. You know me well! ' + answerCount + '/7 correct answers!');
+        break;
+      } else if (movieGuess !== topMovie[x]) {
+        //alert(movieGuess + 'had some plot holes. Try again');
+        //console.log('incorrect');
+      } if (i === 3 && movieGuess !== topMovie[x]) {
+        ///console.log('end of guesses');
+        //alert('Looks like you are out of guesses nice try! ' answerCount + '/7 correct answers!')
+        break;
+      }
+    } if (i === 4 && movieGuess !== topMovie[x]) { break; }
+    if (movieFound === true) {
       break;
     }
-  } if (i === 4 && movieGuess !== topMovie[x]) { break; }
-  if (movieFound === true) {
-    break;
   }
 }
+
+movieGuessingGame();
+
+
 var endOfGameAlt = alert('Thank you for playing ' + userName + 'You scored ' + answerCount + '/7! I live in Seattle. I have 2 pets, a cat and a dog. I like to cook, play golf, ski, hike and ride bicycles. I have a son named Max who will be 2 in December.');
