@@ -1,6 +1,12 @@
 'use strict';
 // alert('is this thing on? test 1 2 3...');
+
+// user name is called throughout the code so declaring userName as a global function below  
 var userName = '';
+// This counter needs to run throughout code -also a global variable 
+var answerCount = 0;
+
+
 
 function welcomeMessage() {
   alert('Hello, welcome to my About Me project!');
@@ -15,10 +21,11 @@ welcomeMessage();
 function questionOne() {
   var greeting = prompt('Nice to meet you ' + userName + '. Would you like to play a guessing game about me today?');
   if (greeting.toLowerCase() === 'yes' || greeting.toLowerCase() === 'y') {
-    alert('Excellent. Let\'s begin.');
+    answerCount++;
+    alert('Excellent. Let\'s begin.' + answerCount + '/7 correct answers!' );
     //console.log(userName + ' is interested in playing -- right on!');
   } else {
-    alert('Oh, come on. You\'re already here. These questions are easy.');
+    alert('Wrong answer. ' + answerCount + '/7 correct answers. You can do better.');
     //console.log(userName + ' turned us down -- bummer --sadface');
   }
 }
@@ -28,10 +35,11 @@ questionOne();
 function questionTwo() {
   var whereILive = prompt('Do I live in Seattle?');
   if (whereILive.toLowerCase() === 'yes' || whereILive.toLowerCase() === 'y') {
-    alert('Bingo! You are correct. Why would anybody live anywhere else?');
+    answerCount++;
+    alert('Bingo! You are correct. Why would anybody live anywhere else?' + answerCount + '/7 correct answers!');
     //console.log(userName + ' thinks you live in Seatlle');
   } else {
-    alert('Ouch... Incorrect. I moved to Seattle in 2009 and love it!');
+    alert('Ouch... Incorrect. I moved to Seattle in 2009 and love it! ' + answerCount + '/7 correct answers!');
     //console.log(userName + 'thinks you live somewhere else');
   }
 }
@@ -41,10 +49,11 @@ questionTwo();
 function questionThree() {
   var doIHavePets = prompt('Do I have any pets?');
   if (doIHavePets.toUpperCase() === 'YES' || doIHavePets.toUpperCase() === 'Y') {
-    alert('Very nice! Correct, I have two pets. A cat named Kitty and a dog named Chloe.');
+    answerCount++;
+    alert('Very nice! Correct, I have two pets. A cat named Kitty and a dog named Chloe.' + answerCount + '/7 correct answers!');
     //console.log(userName + ' thinks you have pets');
   } else {//console.log(userName + ' thinks you don\'t have any pets');
-    alert('Opps, incorrect.... I have two pets. A cat named Kitty and a dog named Chloe.');
+    alert('Opps, incorrect.... I have two pets. A cat named Kitty and a dog named Chloe.' + answerCount + '/7 correct answers!');
   }
 }
 questionThree();
@@ -53,10 +62,11 @@ questionThree();
 function questionFour() {
   var hobbies = prompt('Do I have any hobbies?');
   if (hobbies.toLowerCase() === 'yes' || hobbies.toLowerCase() === 'y') {
-    alert('Well done!, I love to ski, play golf, cook and ride bicylces.');
+    answerCount++;
+    alert('Well done!, I love to ski, play golf, cook and ride bicylces.' + answerCount + '/7 correct answers!');
     //console.log(userName + ' thinks you have hobbies' );
   } else {
-    alert('What?!?! Do think all I do is write code all day? Everybody\'s got a hobbie.');
+    alert('What?!?! Do think all I do is write code all day? Everybody\'s got a hobbie.' + answerCount + '/7 correct answers!');
     //console.log(userName + ' Thinks you only like to code');
   }
 }
@@ -66,10 +76,11 @@ questionFour();
 function questionFive() {
   var kids = prompt('Do I have kids?');
   if (kids.toLowerCase() === 'yes' || kids.toLowerCase() === 'y') {
-    alert('Correct, I have a son named Max who\'s almost 2 and is awesome!');
+    answerCount++;
+    alert('Correct, I have a son named Max who\'s almost 2 and is awesome!' + answerCount + '/7 correct answers!');
     //console.log(userName + ' thinks you have kids');
   } else {
-    alert('Incorrect. I have a son named Max who\'s almost 2 and is amazing!');
+    alert('Incorrect. I have a son named Max who\'s almost 2 and is amazing!' + answerCount + '/7 correct answers!');
     //console.log(userName + ' thinks you don\'t have any kids');
   }
 }
@@ -82,26 +93,27 @@ function guessingGame() {
     var guessQuest = prompt('How many countries have I visited?: ');
     //console.log(i);
     if (parseInt(guessQuest) === numbguess) {
-      alert('Dang, You are good and you know me well!');
+      answerCount++;
+      alert('Dang, You are good and you know me well!' + answerCount + '/7 correct answers!');
       //console.log('user guessed correctly');
       break;
-    } else if (parseInt(guessQuest) > 13) {
+    } else if (parseInt(guessQuest) > 22) {
       alert('Nope, too high, try lower!');
       //console.log ('too high');
-    } else if (parseInt(guessQuest) < 13) {
+    } else if (parseInt(guessQuest) < 21) {
       alert('Nope, too low, guess higher!');
       //console.log ('too low');
     }
     if (i === 3 && parseInt(guessQuest) !== numbguess) {
       //console.log('User ran out of guesses');
-      alert('Sorry, you ran out of guesses, I\'ve been to 22 countries so far.');
+      alert('Sorry, you ran out of guesses, I\'ve been to 22 countries so far.' + answerCount + '/7 correct answers!');
       break;
     }
   }
 }
 guessingGame();
 
-//Question 7 doesn't work yet 
+//Question 7 doesn't work yet
 
 //var topMovie = ['The Big Lebowski','Bill and Ted\'s Excellent Adventure','Spectre','Layer Cake','The Empire Strikes Back',   'Monty Python\'s Search for the Holy Grail','Ghostbusers','Batman Begins','Thor: Ragnarok', 'The Godfather Part II']
 
@@ -113,6 +125,6 @@ guessingGame();
 //}
 //}
 
-var endOfGameAlt = alert('Thank you for playing ' + userName + '! I live in Seattle. I have 2 pets, a cat and a dog. I like to cook, play golf, ski, hike and ride bicycles. I have a son named Max who will be 2 in December.');
+var endOfGameAlt = alert('Thank you for playing ' + userName + 'You scored '+ answerCount + '/7! I live in Seattle. I have 2 pets, a cat and a dog. I like to cook, play golf, ski, hike and ride bicycles. I have a son named Max who will be 2 in December.');
 
 //var endOfGame = alert('Thank you for playing ' + userName + '! I live in Seattle. I have 2 pets, a cat and a dog. I like to cook, play golf, ski, hike and ride bicycles. I have a son named Max who will be 2 in December. Finally, I love to travel. I have visited over 20 countries and can\'t wait till covid is over so I can see more.');
