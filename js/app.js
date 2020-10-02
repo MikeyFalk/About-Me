@@ -6,8 +6,6 @@ var userName = '';
 // This counter needs to run throughout code -also a global variable 
 var answerCount = 0;
 
-
-
 function welcomeMessage() {
   alert('Hello, welcome to my About Me project!');
 
@@ -22,7 +20,7 @@ function questionOne() {
   var greeting = prompt('Nice to meet you ' + userName + '. Would you like to play a guessing game about me today?');
   if (greeting.toLowerCase() === 'yes' || greeting.toLowerCase() === 'y') {
     answerCount++;
-    alert('Excellent. Let\'s begin.' + answerCount + '/7 correct answers!' );
+    alert('Excellent. Let\'s begin. ' + answerCount + '/7 correct answers!');
     //console.log(userName + ' is interested in playing -- right on!');
   } else {
     alert('Wrong answer. ' + answerCount + '/7 correct answers. You can do better.');
@@ -36,7 +34,7 @@ function questionTwo() {
   var whereILive = prompt('Do I live in Seattle?');
   if (whereILive.toLowerCase() === 'yes' || whereILive.toLowerCase() === 'y') {
     answerCount++;
-    alert('Bingo! You are correct. Why would anybody live anywhere else?' + answerCount + '/7 correct answers!');
+    alert('Bingo! You are correct. Why would anybody live anywhere else? ' + answerCount + '/7 correct answers!');
     //console.log(userName + ' thinks you live in Seatlle');
   } else {
     alert('Ouch... Incorrect. I moved to Seattle in 2009 and love it! ' + answerCount + '/7 correct answers!');
@@ -50,10 +48,10 @@ function questionThree() {
   var doIHavePets = prompt('Do I have any pets?');
   if (doIHavePets.toUpperCase() === 'YES' || doIHavePets.toUpperCase() === 'Y') {
     answerCount++;
-    alert('Very nice! Correct, I have two pets. A cat named Kitty and a dog named Chloe.' + answerCount + '/7 correct answers!');
+    alert('Very nice! Correct, I have two pets. A cat named Kitty and a dog named Chloe. ' + answerCount + '/7 correct answers!');
     //console.log(userName + ' thinks you have pets');
   } else {//console.log(userName + ' thinks you don\'t have any pets');
-    alert('Opps, incorrect.... I have two pets. A cat named Kitty and a dog named Chloe.' + answerCount + '/7 correct answers!');
+    alert('Opps, incorrect.... I have two pets. A cat named Kitty and a dog named Chloe. ' + answerCount + '/7 correct answers!');
   }
 }
 questionThree();
@@ -63,10 +61,10 @@ function questionFour() {
   var hobbies = prompt('Do I have any hobbies?');
   if (hobbies.toLowerCase() === 'yes' || hobbies.toLowerCase() === 'y') {
     answerCount++;
-    alert('Well done!, I love to ski, play golf, cook and ride bicylces.' + answerCount + '/7 correct answers!');
+    alert('Well done!, I love to ski, play golf, cook and ride bicylces. ' + answerCount + '/7 correct answers!');
     //console.log(userName + ' thinks you have hobbies' );
   } else {
-    alert('What?!?! Do think all I do is write code all day? Everybody\'s got a hobbie.' + answerCount + '/7 correct answers!');
+    alert('What?!?! Do think all I do is write code all day? Everybody\'s got a hobbie. ' + answerCount + '/7 correct answers!');
     //console.log(userName + ' Thinks you only like to code');
   }
 }
@@ -94,7 +92,7 @@ function guessingGame() {
     //console.log(i);
     if (parseInt(guessQuest) === numbguess) {
       answerCount++;
-      alert('Dang, You are good and you know me well!' + answerCount + '/7 correct answers!');
+      alert('Dang, You are good and you know me well! ' + answerCount + '/7 correct answers!');
       //console.log('user guessed correctly');
       break;
     } else if (parseInt(guessQuest) > 22) {
@@ -106,25 +104,39 @@ function guessingGame() {
     }
     if (i === 3 && parseInt(guessQuest) !== numbguess) {
       //console.log('User ran out of guesses');
-      alert('Sorry, you ran out of guesses, I\'ve been to 22 countries so far.' + answerCount + '/7 correct answers!');
+      alert('Sorry, you ran out of guesses, I\'ve been to 22 countries so far. ' + answerCount + '/7 correct answers!');
       break;
     }
   }
 }
 guessingGame();
 
-//Question 7 doesn't work yet
 
-//var topMovie = ['The Big Lebowski','Bill and Ted\'s Excellent Adventure','Spectre','Layer Cake','The Empire Strikes Back',   'Monty Python\'s Search for the Holy Grail','Ghostbusers','Batman Begins','Thor: Ragnarok', 'The Godfather Part II']
 
-//for (var i = 0; i<4; i++){
-//console.log('i is = ' + i + ' and ' + topMovie[i] + ' is the best movie'){
-//  var movieGuess = prompt('Can you name one of my top 10 favorite movies?');
-//} if (movieGuess.toLowerCase() = topMovie.toLowerCase()){
-//console.log('user guessed correctly')
-//}
-//}
 
-var endOfGameAlt = alert('Thank you for playing ' + userName + 'You scored '+ answerCount + '/7! I live in Seattle. I have 2 pets, a cat and a dog. I like to cook, play golf, ski, hike and ride bicycles. I have a son named Max who will be 2 in December.');
+var topMovie = ['the big lebowski', 'bill and ted\'s excellent adventure', 'spectre', 'layer cake', 'the empire strikes back', 'monty python\'s search for the holy grail', 'ghostbusers', 'batman begins', 'thor: ragnarok', 'the godfather part ii']
 
-//var endOfGame = alert('Thank you for playing ' + userName + '! I live in Seattle. I have 2 pets, a cat and a dog. I like to cook, play golf, ski, hike and ride bicycles. I have a son named Max who will be 2 in December. Finally, I love to travel. I have visited over 20 countries and can\'t wait till covid is over so I can see more.');
+for (var i = 0; i < 4; i++) {
+  var movieFound = false;
+  var movieGuess = prompt('Can you name one of my top 10 favorite movies?').toLowerCase();
+  for (var x = 0; x < topMovie.length; x++) {
+    if (movieGuess === topMovie[x]) {
+      answerCount++;
+      //console.log('correct');
+      movieFound = true;
+      alert('Whoa, you guessed it. You know me well! ' + answerCount + '/7 correct answers!');
+      break;
+    } else if (movieGuess !== topMovie[x]) {
+      //alert(movieGuess + 'had some plot holes. Try again');
+      //console.log('incorrect');
+    } if (i === 3 && movieGuess !== topMovie[x]) {
+      ///console.log('end of guesses');
+      //alert('Looks like you are out of guesses nice try! ' answerCount + '/7 correct answers!')
+      break;
+    }
+  } if (i === 4 && movieGuess !== topMovie[x]) { break; }
+  if (movieFound === true) {
+    break;
+  }
+}
+var endOfGameAlt = alert('Thank you for playing ' + userName + 'You scored ' + answerCount + '/7! I live in Seattle. I have 2 pets, a cat and a dog. I like to cook, play golf, ski, hike and ride bicycles. I have a son named Max who will be 2 in December.');
